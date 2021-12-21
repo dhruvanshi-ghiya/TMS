@@ -1,0 +1,16 @@
+﻿<Window x:Class="TMS.Pages.Planner.SummaryReport"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TMS.Pages.Planner"
+        mc:Ignorable="d"
+        Title="SummaryReport" Height="600" Width="1000">
+    <Grid>
+        <Label Content="All Time:" HorizontalAlignment="Left" Margin="25,22,0,0" VerticalAlignment="Top" Height="36" Width="158" FontWeight="Bold" FontSize="18"/>
+        <Label Content="Last 2 weeks:" HorizontalAlignment="Left" Margin="519,22,0,0" VerticalAlignment="Top" Height="36" Width="158" FontWeight="Bold" FontSize="18"/>
+        <ListBox Name="AllTimeListBox" HorizontalAlignment="Left" Height="490" Margin="25,56,0,0" VerticalAlignment="Top" Width="456"/>
+        <ListBox Name="TwoWeeksListBox" HorizontalAlignment="Left" Height="490" Margin="519,56,0,0" VerticalAlignment="Top" Width="444"/>
+
+    </Grid>
+</Window>

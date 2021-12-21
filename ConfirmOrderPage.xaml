@@ -1,0 +1,76 @@
+﻿<Window x:Class="TMS.Pages.Planner.ConfirmOrderPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TMS.Pages"
+        mc:Ignorable="d"
+        Title="ConfirmOrderPage" Height="500" Width="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="385*"/>
+            <ColumnDefinition Width="607*"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle HorizontalAlignment="Left" Height="469" Stroke="Black" VerticalAlignment="Top" Width="992" Grid.ColumnSpan="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#1D3354" Offset="0.0" />
+                    <GradientStop Color="#9ED8DB" Offset="1.0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Name="OrderInfoSecondary" Foreground="AntiqueWhite" HorizontalAlignment="Left" Margin="316,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="326" FontSize="18" RenderTransformOrigin="0.609,0.404" Grid.ColumnSpan="2" TextAlignment="Center"/>
+        <TextBlock Name="RouteVisual" Foreground="AntiqueWhite" HorizontalAlignment="Left" Margin="10,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Width="972" FontWeight="Bold" FontSize="18" TextAlignment="Center" Grid.ColumnSpan="2"/>
+        <Separator HorizontalAlignment="Left" Height="19" Margin="243,72,0,0" VerticalAlignment="Top" Width="470" Grid.ColumnSpan="2"/>
+        <Label Content="Planet Express:" HorizontalAlignment="Left" Margin="6,351,0,0" VerticalAlignment="Top" Height="32" Width="135" FontWeight="Bold" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="19,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="82" Width="96">
+			<Run Text="Windsor"/>
+			<LineBreak/>
+			<Run Text="Hamilton"/>
+			<LineBreak/>
+			<Run Text="Oshawa"/>
+			<LineBreak/>
+			<Run Text="Belleville"/>
+			<LineBreak/>
+			<Run Text="Ottawa"/>
+        </TextBlock>
+        <Label Content="Schooner's" HorizontalAlignment="Left" Margin="120,351,0,0" VerticalAlignment="Top" Height="32" Width="135" FontWeight="Bold" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="131,375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="84" Width="96">
+			<Run Text="London"/>
+			<LineBreak/>
+			<Run Text="Toronto"/>
+			<LineBreak/>
+			<Run Text="Kingston"/>
+        </TextBlock>
+        <Label Content="Tillman Transport" HorizontalAlignment="Left" Margin="208,351,0,0" VerticalAlignment="Top" Height="32" Width="135" FontWeight="Bold" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="220,375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="84" Width="96">
+			<Run Text="Windsor"/>
+			<LineBreak/>
+			<Run Text="London"/>
+			<LineBreak/>
+			<Run Text="Hamilton"/>
+        </TextBlock>
+        <Label Content="We Haul" HorizontalAlignment="Left" Margin="338,352,0,0" VerticalAlignment="Top" Height="32" Width="135" FontWeight="Bold" FontSize="14" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="348,375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="47" Width="96" Grid.ColumnSpan="2">
+			<Run Text="Toronto "/>
+			<LineBreak/>
+			<Run Text="Ottawa"/>
+        </TextBlock>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="169" Margin="-22,338,0,-38" VerticalAlignment="Top" Width="444" Grid.ColumnSpan="2"/>
+        <Label Content="Add trip to order:" HorizontalAlignment="Left" Margin="19,158,0,0" VerticalAlignment="Top" Height="39" Width="167" FontWeight="Bold" FontSize="18" RenderTransformOrigin="0.503,-0.359"/>
+        <Label Content="Order summary:" HorizontalAlignment="Left" Margin="306,145,0,0" VerticalAlignment="Top" Height="30" Width="167" FontWeight="Bold" FontSize="16" Grid.Column="1" RenderTransformOrigin="0.144,0.718"/>
+        <Button Name="ConfirmOrderBtn" Background="#E9FFF9" Content="Confirm Order" HorizontalAlignment="Left" Height="25" Margin="340,405,0,0" VerticalAlignment="Top" Width="84" Click="ConfirmOrderBtn_Click" Grid.Column="1" RenderTransformOrigin="0.76,0.604"/>
+        <Button Name="AddTripBtn" Background="#E9FFF9" Content="Add trip" HorizontalAlignment="Left" Height="25" Margin="258,249,0,0" VerticalAlignment="Top" Width="85" Click="AddTripBtn_Click"/>
+        <ComboBox Name="CarrierDropdown" Background="#E9FFF9" HorizontalAlignment="Left" Margin="82,211,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CarrierDropdown_SelectionChanged"/>
+        <ComboBox Name="StartCityDropdown" Background="#E9FFF9" HorizontalAlignment="Left" Margin="82,249,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox Name="EndCityDropdown" Background="#E9FFF9" HorizontalAlignment="Left" Margin="82,285,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Carrier:" HorizontalAlignment="Left" Margin="19,207,0,0" VerticalAlignment="Top" Width="90"/>
+        <Label Content="Start city:" HorizontalAlignment="Left" Margin="19,245,0,0" VerticalAlignment="Top" Width="90"/>
+        <Label Content="End city:" HorizontalAlignment="Left" Margin="19,281,0,0" VerticalAlignment="Top" Width="90"/>
+        <Separator HorizontalAlignment="Left" Height="19" Margin="243,5,0,0" VerticalAlignment="Top" Width="470" Grid.ColumnSpan="2"/>
+        <ListBox Name="OrderSummaryList" Background="#E9FFF9" HorizontalAlignment="Left" Height="190" Margin="207,197,0,0" VerticalAlignment="Top" Width="350" Grid.Column="1" SelectionChanged="OrderSummaryList_SelectionChanged"/>
+        <Label Content="(click to delete)" HorizontalAlignment="Left" Margin="320,167,0,0" VerticalAlignment="Top" Height="30" Width="104" FontSize="14" Grid.Column="1" RenderTransformOrigin="0.144,0.718"/>
+        <TextBlock Name="TripInputError" Foreground="Red" HorizontalAlignment="Left" Margin="220,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="155"/>
+    </Grid>
+</Window>

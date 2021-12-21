@@ -1,0 +1,35 @@
+﻿<Window x:Class="TMS.Pages.PlannerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TMS.Pages"
+        mc:Ignorable="d"
+        Title="PlannerWindow" Height="450" Width="800">
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="469" Stroke="Black" VerticalAlignment="Top" Width="992" Grid.ColumnSpan="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#1D3354" Offset="0.0" />
+                    <GradientStop Color="#9ED8DB" Offset="1.0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="275" Margin="10,120,0,0" VerticalAlignment="Top" Width="339"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="275" Margin="404,120,0,0" VerticalAlignment="Top" Width="368"/>
+        <Label FontWeight="Bold" Foreground="AntiqueWhite" Content="Pending Orders..." HorizontalAlignment="Left" Margin="409,88,0,0" VerticalAlignment="Top" Height="37" Width="150" FontSize="18"/>
+        <Label Foreground="AntiqueWhite" FontWeight="Bold" Content="Active Orders..." HorizontalAlignment="Left" Margin="11,90,0,0" VerticalAlignment="Top" Height="37" Width="150" FontSize="16"/>
+        <Button Content="+1hr" HorizontalAlignment="Left" Margin="616,25,0,0" VerticalAlignment="Top" Width="75" Click="AddOneDay_Click" RenderTransformOrigin="-0.731,0.524"/>
+        <Label Foreground="AntiqueWhite" Name="LiveTimeLabel" Content="" HorizontalAlignment="Left" Margin="312,20,0,0" VerticalAlignment="Top" Height="37" Width="186" FontSize="14" FontWeight="Bold" />
+        <Button Content="Generate Summary &#xD;&#xA;Report" HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" Width="151" Height="46" Click="Generate_Summary_Report" HorizontalContentAlignment="center"/>
+        <Menu HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="792"/>
+        <Button Name="btn_ActiveOrdersRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="336,93,0,0" VerticalAlignment="Top" Width="50" Height="22" Click="btn_ActiveOrdersRefreshClick"/>
+        <Button Name="btn_PendingOrdersRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="725,95,0,0" VerticalAlignment="Top" Width="52" Height="22" Click="btn_PendingOrdersRefreshCick" FontSize="14"/>
+        <ListBox Name="ActiveOrdersListBox" HorizontalAlignment="Left" Height="275" Margin="10,120,0,0" VerticalAlignment="Top" Width="376" SelectionChanged="ActiveOrdersListBox_SelectionChanged"/>
+        <ListBox Name="PendingOrdersListBox" HorizontalAlignment="Left" Height="275" Margin="404,120,0,0" VerticalAlignment="Top" Width="368"  SelectionChanged="PendingOrdersListBox_SelectionChanged"/>
+        <Separator HorizontalAlignment="Left" Height="11" Margin="353,52,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Content="Test Data" HorizontalAlignment="Left" Height="22" Margin="648,95,0,0" VerticalAlignment="Top" Width="66" Click="Button_Click"/>
+        <Button Name="SignOut" Content="Sign Out" HorizontalAlignment="Left" Margin="702,25,0,0" VerticalAlignment="Top" Width="75" Click="SignOutClick" RenderTransformOrigin="-0.731,0.524"/>
+
+    </Grid>
+</Window>
