@@ -1,0 +1,31 @@
+﻿<Window x:Class="Admin.ConnectionSettingsPopUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Admin"
+        mc:Ignorable="d"
+        Title="ConnectionSettingsPopUp" Height="200" Width="400" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="169" Stroke="Black" VerticalAlignment="Top" Width="392">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#1D3354" Offset="0.0" />
+                    <GradientStop Color="#9ED8DB" Offset="1.0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <StackPanel Height="100" Width="350" Margin="12,10,10,39" >
+            <Label Margin="0,0,223,0" Foreground="#E9FFF9">
+                Current Connection IP:
+            </Label>
+            <TextBox Name="IPTextBox" Background="#E9FFF9"  BorderBrush="Black" BorderThickness="2"></TextBox>
+
+            <Label Content="Current Connection Password:" Foreground="#E9FFF9"/>
+            <TextBox Name="PortTextBox" Background="#E9FFF9"  BorderBrush="Black" BorderThickness="2"></TextBox>
+        </StackPanel>
+        <Button Name="SetConnectionButton" Content="Set" Background="#E9FFF9" HorizontalAlignment="Left" Margin="22,115,0,0" VerticalAlignment="Top" Width="158" RenderTransformOrigin="-0.322,0.08" Click="SetConnectionButton_Click" />
+        <Button Name="CancelConnectionButton" Content="Cancel" Background="#E9FFF9" HorizontalAlignment="Left" Margin="214,115,0,0" VerticalAlignment="Top" Width="158" RenderTransformOrigin="-0.322,0.08" Click="CancelConnectionButton_Click"/>
+
+    </Grid>
+</Window>

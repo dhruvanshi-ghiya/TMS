@@ -1,0 +1,30 @@
+﻿<Window x:Class="Admin.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Admin"
+        mc:Ignorable="d"
+        Title="AdminWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="419" Stroke="Black" VerticalAlignment="Top" Width="792">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#1D3354" Offset="0.0" />
+                    <GradientStop Color="#9ED8DB" Offset="1.0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Rectangle.Fill="#467599" HorizontalAlignment="Left" Height="258" Margin="171,80,0,0" Stroke="Black" VerticalAlignment="Top" Width="450">
+        </Rectangle>
+        <StackPanel Height="258" Width="450" Margin="121,30,121,31" Grid.RowSpan="2" >
+            <Button Name="SettingsButton" Background="#E9FFF9" BorderBrush="Black" BorderThickness="1" ClickMode="Release" Margin="10" Height="23" Click="SettingsButton_Click">General Settings</Button>
+            <Button Name="ReviewLogfilesButton" Background="#E9FFF9" BorderBrush="Black" BorderThickness="1" ClickMode="Release" Margin="10" Height="23" Click="ReviewLogfilesButton_Click">Review Log Files</Button>
+            <Button Name="AlterRateFeeTable" Background="#E9FFF9" BorderBrush="Black" BorderThickness="1" ClickMode="Release" Margin="10" Height="23" Click="AlterRateFeeTable_Click">Alter Rate/Fee Tables</Button>
+            <Button Name="AlterCarrierData" Background="#E9FFF9" BorderBrush="Black" BorderThickness="1" ClickMode="Release" Margin="10" Height="23" Click="AlterCarrierData_Click">Alter Carrier Data</Button>
+            <Button Name="AlterRouteTable" Background="#E9FFF9" BorderBrush="Black" BorderThickness="1" ClickMode="Release" Margin="10" Height="23" Click="AlterRouteTable_Click">Alter Route Table</Button>
+            <Button Name="BackupDatabase" Background="#E9FFF9" BorderBrush="Black" BorderThickness="1" ClickMode="Release" Margin="10" Height="23" Click="BackupDatabase_Click">Backup Local Database</Button>
+        </StackPanel>
+        <Button Content="Sign Out" HorizontalAlignment="Left" Margin="367,375,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="TMS.Pages.Admin.AlterRouteTableWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TMS.Pages.Admin"
+        mc:Ignorable="d"
+        Title="AlterRouteTableWindow" Height="450" Width="800">
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="419" Stroke="Black" VerticalAlignment="Top" Width="792">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#1D3354" Offset="0.0" />
+                    <GradientStop Color="#9ED8DB" Offset="1.0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock  Foreground="#E9FFF9" HorizontalAlignment="Left" Height="43" Margin="280,99,0,0" TextWrapping="Wrap" Text="Route Table" VerticalAlignment="Top" Width="240" TextAlignment="Center" LineHeight="36" FontFamily="Perpetua Titling MT" FontSize="24"/>
+        <Button x:Name="RouteTableInsertButton" Background="#E9FFF9" BorderBrush="Black" BorderThickness="1" ClickMode="Release" Margin="181,142,181,254"  Content="Insert"/>
+        <Button x:Name="RouteTableUpdateButton" Background="#E9FFF9" BorderBrush="Black" BorderThickness="1" ClickMode="Release" Margin="181,181,181,215" Content="Update"/>
+        <Button x:Name="RouteTableDeleteButton" Background="#E9FFF9" BorderBrush="Black" BorderThickness="1" ClickMode="Release" Margin="181,219,181,177" Content="Delete"/>
+    </Grid>
+</Window>
